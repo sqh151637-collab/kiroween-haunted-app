@@ -1,0 +1,13 @@
+{
+  "name": "lint-on-save",
+  "description": "Example Kiro hook: remind / run a light check when saving JS or CSS. Scaffolding — expand while building in Kiro.",
+  "version": "1",
+  "when": {
+    "type": "fileSaved",
+    "patterns": ["*.js", "*.css", "*.html"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The user just saved a haunted Spell Book file. Quickly scan for obvious issues (broken selectors, missing localStorage keys, accessibility regressions). Suggest a tiny fix only if something is clearly wrong; otherwise say the spell holds."
+  }
+}

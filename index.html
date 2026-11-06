@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Haunted Spell Book — a Kiroween 2026 Costume Contest entry. Cast your tasks into the beyond." />
+  <title>Haunted Spell Book · Kiroween</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Creepster&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="fog fog-a" aria-hidden="true"></div>
+  <div class="fog fog-b" aria-hidden="true"></div>
+  <div id="trail" aria-hidden="true"></div>
+
+  <main class="book">
+    <header class="book-header">
+      <div class="candle" aria-hidden="true">
+        <span class="flame"></span>
+        <span class="wick"></span>
+        <span class="wax"></span>
+      </div>
+      <h1>Haunted Spell Book</h1>
+      <p class="tagline">Inscribe your tasks. Cast them into the beyond.</p>
+      <p class="badge">Kiroween 2026 · Costume Contest</p>
+    </header>
+
+    <form id="spell-form" class="inscribe" autocomplete="off">
+      <label class="sr-only" for="spell-input">New spell</label>
+      <input
+        id="spell-input"
+        type="text"
+        maxlength="120"
+        placeholder="Whisper a spell… (e.g. Finish the demo video)"
+        required
+      />
+      <button type="submit" class="btn-cast">Inscribe</button>
+    </form>
+
+    <section class="grimoire" aria-labelledby="list-heading">
+      <div class="list-head">
+        <h2 id="list-heading">Active Incantations</h2>
+        <span id="count" class="count">0</span>
+      </div>
+      <ul id="spell-list" class="spell-list"></ul>
+      <p id="empty" class="empty hidden">
+        The pages are blank… carve your first spell above.
+      </p>
+    </section>
+
+    <footer class="book-footer">
+      <button type="button" id="clear-cast" class="btn-ghost" title="Remove all cast spells">
+        Banish completed
+      </button>
+      <span class="hint">Spells linger in this browser · localStorage</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
